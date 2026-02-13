@@ -1,5 +1,6 @@
 function noReturn(...args: number[]): void {
-  //args é a sacola de itens em strings e Void imprime no console sem devolver dado para usar dps
+  //args é a sacola de itens em strings
+  //Void é quando não retorna nada
   console.log(args.join(' ')); //join = pega todos os itens da lista 'args' e os cola um no outro
 }
 
