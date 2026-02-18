@@ -2,7 +2,7 @@
 const dadosCliente1: readonly [number, string] = [1, 'Luiz'];
 const dadosCliente2: [number, string, string] = [10, 'Bacana', 'Legal'];
 const dadosCliente3: [number, string, string?] = [12, 'tresh'];
-const dadosCliente4: [number, string, ...string[]] = [12, 'tresh', 'miranda'];
+const dadosCliente4: [number, string, ...string[]] = [12, 'tresh', 'miranda'];//tupla com final aberto, obrigatorio tem number e string e depois pode vir quantas strings quiser
 
 //dadosCliente1[0] = 100;
 //dadosCliente1[1] = 'legal';
