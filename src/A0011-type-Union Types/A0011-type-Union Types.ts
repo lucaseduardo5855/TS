@@ -1,5 +1,7 @@
 //Union Types -> Utilizar quando queremos um tipo ou outro, ou quantos tipos eu quiser
 
+//No caso aqui vai ser ou number ou string ou boolean
+
 function addConcat(
   a: number | string | boolean,
   b: number | string | boolean,
