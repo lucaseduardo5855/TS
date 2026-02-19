@@ -8,7 +8,6 @@ const pessoa: Pessoa = {
   sobrenome: 'melo',
   idade: 22,
 };
-
 console.log(pessoa);
 
 //Module Mode
