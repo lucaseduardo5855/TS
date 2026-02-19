@@ -1,12 +1,15 @@
-//Unkown é mais seguro que any, any deixa realizar varias coisas liberadas o unkonw ja da erro
+type TemNome = { nome: string };
+type TemSobrenome = { sobrenome: string };
+type TemIdade = { idade: number };
+type Pessoa = TemNome & TemSobrenome & TemIdade; // AND
 
-let x: unknown;
+const pessoa: Pessoa = {
+  nome: 'lucas',
+  sobrenome: 'melo',
+  idade: 22,
+};
 
-x = 100;
-x = 'Luiz';
-x = 900;
-x = 10;
-const y = 800;
+console.log(pessoa);
 
-//Se x for numero ele realiza a conta
-if (typeof x === 'number') console.log( x + y);
+//Module Mode
+export { pessoa };
