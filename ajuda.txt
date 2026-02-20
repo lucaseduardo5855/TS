@@ -1,2 +1,8 @@
 1 - precisamos no packjson do tsloader do webpack e webpack-cli
 2 - rodar script no packson chamadno webpack -w
+3 - webpack configurado p frontend 
+4 - tsconfig uma config especifica para frontend
+5 - pasta DIST -> Backend e tsconfig.json Backend
+6 - pasta frontend -> Frontend e tsconfig.frontend Frontend
+7 - no packjson temos o front com 'build' e "webpack -w",
+8 - no packjson temos o back com 'build' e "tsc",

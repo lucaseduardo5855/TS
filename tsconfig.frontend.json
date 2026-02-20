@@ -3,7 +3,7 @@
     "target": "es2016",
     "module": "commonjs",
     "lib": ["es6", "dom"],
-    "outDir": "./dist",
+    "outDir": "./frontend/assets/js", //frontend pasta onde vai ficar os arquivos
     "rootDir": "./src",
     "strict": true,
     "esModuleInterop": true

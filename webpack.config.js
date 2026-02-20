@@ -8,8 +8,11 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        loader: 'ts-loader',
         exclude: /node_modules/,
+        options: {
+          configFile: 'tsconfig.frontend.json',
+        },
       },
     ],
   },
@@ -17,8 +20,8 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
-    filename: 'bundle.js', //nome arquivo de saida 
-    path: path.resolve(__dirname, 'dist', 'assets', 'js'), //local do arquivo de saida
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'frontend', 'assets', 'js'),
   },
   devtool: 'source-map',
 };
