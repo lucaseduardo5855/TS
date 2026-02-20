@@ -1,0 +1,2 @@
+1 - precisamos no packjson do tsloader do webpack e webpack-cli
+2 - rodar script no packson chamadno webpack -w
