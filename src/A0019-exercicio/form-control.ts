@@ -14,6 +14,7 @@ form.addEventListener('submit', function(event: Event) {
   checkForEmptyFields(username, email, password, password2);
   checkEmail(email);
   checkEqualPasswords(password, password2);
+  if(shouldSendForm(this)) console.log('Formulario enviado!');
 });
 
 
@@ -52,4 +53,11 @@ function showErrorMessage(input: HTMLElement, msg: string): void{
   errorMessage.innerText = msg;
 
   formField.classList.add(SHOW_ERROR_MESSAGES);
+}
+
+// Envio de formulario e validação de campos no geral
+function shouldSendForm(form: HTMLFormElement): boolean{
+  let send = true;
+  form.querySelectorAll('.' + SHOW_ERROR_MESSAGES).forEach(() => (send = false));
+  return send;
 }

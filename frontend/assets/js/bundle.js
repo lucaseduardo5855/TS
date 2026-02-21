@@ -26,6 +26,8 @@ form.addEventListener('submit', function (event) {
     checkForEmptyFields(username, email, password, password2);
     checkEmail(email);
     checkEqualPasswords(password, password2);
+    if (shouldSendForm(this))
+        console.log('Formulario enviado!');
 });
 //Função para validação do Email
 function checkEmail(input) {
@@ -56,6 +58,12 @@ function showErrorMessage(input, msg) {
     const errorMessage = formField.querySelector('.error-message');
     errorMessage.innerText = msg;
     formField.classList.add(SHOW_ERROR_MESSAGES);
+}
+// Envio de formulario e validação de campos no geral
+function shouldSendForm(form) {
+    let send = true;
+    form.querySelectorAll('.' + SHOW_ERROR_MESSAGES).forEach(() => (send = false));
+    return send;
 }
 
 
