@@ -16,7 +16,7 @@ Validação de formulario com TS
 
 .vamos passar o ErrorMessage para mensagem
 
-.e o form vai ter uma lista que adiciona a classe de erro q setamos no inicio e tem no css, pq ela é um class do css quando é erro
+.e o formF vai ter uma lista que adiciona a classe de erro q setamos no inicio e tem no css, pq ela é um class do css quando é erro
 
 .vamos testar o showError no input de usuario com uma msg.
 
@@ -30,7 +30,7 @@ obs: n precisamos mais do show e do hide no final ali q usamos p testar as mensa
 
 .a primeira vamos checkar os campos vazis e passar os campos q queremos checkar
 
-.vamos fazer a função dela, onde pegamos o input e fazemos o for, onde teremos a msg q n pode ficar vazio os campos.
+.vamos fazer a função dela, onde pegamos todos os input e fazemos o for, onde teremos a msg q n pode ficar vazio os campos.
 
 obs: vamos validar se deu msg de erro em todos os inputs ali
 
@@ -40,10 +40,12 @@ e vamos fazer a função e validar e retornando msg
 
 .Checkar agora as 2 senhas se está de acordo
 
-.tudo ok agora vamos clicar no form e ver se ele envia um console log
+.fazer nada -> tudo ok agora vamos clicar no form e ver se ele envia um console log
 p isso vamos fazer o forms no forms fields com a classe de erro q tem algum campo com erro e n envia.
 
-.entao vamos criar a função temos q enviar formulario em ingles, e nela vai ter retorno de sim ou nao, vamos fazer uma variavel q pode ser mudada q começa verdadeira e vamos pegar o formulario e passar para todos o erro da constante, e se tiver erro vai cair dentro de um forEach e vai retornar falso
+.entao vamos criar a função temos q enviar formulario em ingles, e nela vai ter retorno de sim ou nao, lembrando q temos o css com a classe de erro.
+vamos fazer uma variavel q pode ser mudada q começa verdadeira 
+e vamos pegar todos so formulario e passar para todos o erro da constante, e se tiver erro vai cair dentro de um forEach e vai retornar falso
 
 .e la em cima vamos fazer o se o formularioforenviado e tiver formulario dentro dele q é o outro corpo la, vai retornar console.log mas podedmos enviar com ajax tb. ou submit.
 

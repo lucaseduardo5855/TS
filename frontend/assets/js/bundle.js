@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 const isEmail_1 = __importDefault(__webpack_require__(/*! validator/lib/isEmail */ "./node_modules/validator/lib/isEmail.js"));
-const SHOW_ERROR_MESSAGES = 'show-error-message';
+const SHOW_ERROR_MESSAGE = 'show-error-message';
 const form = document.querySelector('.form');
 const username = document.querySelector('.username');
 const email = document.querySelector('.email');
@@ -22,47 +22,47 @@ const password = document.querySelector('.password');
 const password2 = document.querySelector('.password2');
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    hideMessageError(this);
-    checkForEmptyFields(username, email, password, password2);
+    hideErrorMessage(this);
+    checkEmptyFields(username, email, password, password2);
     checkEmail(email);
-    checkEqualPasswords(password, password2);
+    checkPassword(password, password2);
     if (shouldSendForm(this))
-        console.log('Formulario enviado!');
+        return console.log('Enviado');
 });
-//Função para validação do Email
-function checkEmail(input) {
-    if (!(0, isEmail_1.default)(input.value))
-        showErrorMessage(input, 'E-mail invalido');
-}
-//Função para validação das duas senhas
-function checkEqualPasswords(password, password2) {
-    if (password.value !== password2.value) {
-        showErrorMessage(password, 'Senha não batem');
-        showErrorMessage(password2, 'Senha não batem');
-    }
-}
-//Função para validação de campos vazios
-function checkForEmptyFields(...inputs) {
-    inputs.forEach(input => {
-        if (!input.value)
-            showErrorMessage(input, 'Campo não pode ficar vazio');
-    });
-}
-//Função onde vamos ocultar msg de erros
-function hideMessageError(form) {
-    form.querySelectorAll('.' + SHOW_ERROR_MESSAGES).forEach((item) => item.classList.remove(SHOW_ERROR_MESSAGES));
-}
-//Exibe a msg de erro especifica abaixo do input
+//Function que mostra o erro por msg
 function showErrorMessage(input, msg) {
     const formField = input.parentElement;
     const errorMessage = formField.querySelector('.error-message');
     errorMessage.innerText = msg;
-    formField.classList.add(SHOW_ERROR_MESSAGES);
+    formField.classList.add(SHOW_ERROR_MESSAGE);
 }
-// Envio de formulario e validação de campos no geral
+//Function que retira msg de erros
+function hideErrorMessage(form) {
+    form.querySelectorAll('.' + SHOW_ERROR_MESSAGE);
+}
+//Validações 
+//Validação de check nos inputs
+function checkEmptyFields(...inputs) {
+    inputs.forEach((input) => {
+        if (!input.value)
+            showErrorMessage(input, 'Preencha o Campo.');
+    });
+}
+//Função de check Email
+function checkEmail(input) {
+    if (!(0, isEmail_1.default)(input.value))
+        showErrorMessage(input, 'Erro ao validar E-mail, tente novamente!');
+}
+//Função de Validação das 2 senhas se está de acordo
+function checkPassword(password, password2) {
+    if (password.value !== password2.value) {
+        showErrorMessage(password, 'Valide as senhas por gentileza');
+    }
+}
+//Vamos validar os inputs por completo 
 function shouldSendForm(form) {
     let send = true;
-    form.querySelectorAll('.' + SHOW_ERROR_MESSAGES).forEach(() => (send = false));
+    form.querySelectorAll('.' + SHOW_ERROR_MESSAGE).forEach(() => (send = false));
     return send;
 }
 
