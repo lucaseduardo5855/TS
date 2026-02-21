@@ -2,7 +2,7 @@ const path = require("node:path");
 
 module.exports = {
   mode: 'development',
-  entry: './src/A0018-webpack/index.ts',//arquivo de entrada no webpack
+  entry: './src/A0019-exercicio/A0019-exercicio.ts',//arquivo de entrada no webpack
   devtool: 'inline-source-map',
   module: {
     rules: [

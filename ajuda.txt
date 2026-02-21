@@ -6,3 +6,6 @@
 6 - pasta frontend -> Frontend e tsconfig.frontend Frontend
 7 - no packjson temos o front com 'build' e "webpack -w",
 8 - no packjson temos o back com 'build' e "tsc",
+9 - configuração do webpack no entry 
+10 - temos q ter o validator
+11 - npm i @types/node e validator
