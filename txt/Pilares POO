@@ -56,3 +56,6 @@ quando eu só chamar o valor = (GET)
 Static
 Não temos acesso aos metodos static pela instancia ex: pessoa. apenas pela classe
 Atributos staticos para reutilizar tb é bom ex: CpfPadrao e passar ele com classe ex: Pessoa.CpfPadrao
+
+
+FactoryMethod = Quando um método de uma classe cria um novo objeto
