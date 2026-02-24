@@ -1,12 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "es2019",
     "module": "commonjs",
     "lib": ["es6", "dom"],
     "outDir": "./frontend/assets/js", //frontend pasta onde vai ficar os arquivos
     "rootDir": "./src",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "noEmitOnError": true
   },
   "include": ["./src"]
 }
