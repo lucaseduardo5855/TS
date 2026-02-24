@@ -7,39 +7,36 @@ Pilares da POO
   private sobrenome: string;
 
   constructor(nome: string, sobrenome: string){
-    this.nome = nome;
-    this.sobrenome = sobrenome;
+  this.nome = nome;
+  this.sobrenome = sobrenome;
   }
-}
-
+  }
 
 - Encapsulamento = Visa ocultar partes internas de um objeto e exibir apenas o necessario para uso externo
-ex: Controle de tv (botoes e interface) e nao precisamos saber como funciona internamente para ele funcionar.
-
+  ex: Controle de tv (botoes e interface) e nao precisamos saber como funciona internamente para ele funcionar.
 
 - Herança = Visa passar características de um objeto para outro
-ex: Filho de cachorro por exemplo (filhotes recebem as caracteristicas dos pais)
-dog extends de Animal e cat extends de Animal tb
-
+  ex: Filho de cachorro por exemplo (filhotes recebem as caracteristicas dos pais)
+  dog extends de Animal e cat extends de Animal tb
 
 - Polimorfismo = Algo que é polimorfo tem a habilidade de assumir diferentes formas
-ex:  Uma função que pede um objeto genérico do tipo "Animal", 
-mas que se comporta de formas diferentes dependendo se você passa um objeto "Cachorro" (late) ou "Gato" (mia) para ela, sem precisar usar IF/ELSE.
-
+  ex: Uma função que pede um objeto genérico do tipo "Animal",
+  mas que se comporta de formas diferentes dependendo se você passa um objeto "Cachorro" (late) ou "Gato" (mia) para ela, sem precisar usar IF/ELSE.
 
 Public -> Acessivel em todas as partes do código
 Private -> Acessivel apenas dentro do bloco de código que ele foi criado (Encapsulamento)
-dados sensivel = Sempre em private 
-
+dados sensivel = Sempre em private
 
 Herança (Diagrama)
-+ Antes do nome = Public
-- Antes do nome = Private
+
+- Antes do nome = Public
+
+* Antes do nome = Private
+
 # Antes do nome = Protected
 
 Polimorfismo
 ex: Passagem de um para outro com a classe igual Ex de Pessoa para Cliente e Aluno do diagrama e no codigo
-
 
 Public = Qualquer lugar é acessada
 
@@ -50,11 +47,12 @@ Private = Quando temos atributos privador nós disponibilzamos acessos atravez d
 
 Protected = Mesma coisa de privated soq deixa acessar na Classe criada a (Pai) e as subclasses, mas fora dela não tb.
 
-
 Get e Set
 obs: Se comportam como atributo da classe
-ex: _cpf passando ele valor no get e set
+ex: \_cpf passando ele valor no get e set
 quando eu usar = me refiro ao (SET)
 quando eu só chamar o valor = (GET)
 
-
+Static
+Não temos acesso aos metodos static pela instancia ex: pessoa. apenas pela classe
+Atributos staticos para reutilizar tb é bom ex: CpfPadrao e passar ele com classe ex: Pessoa.CpfPadrao
