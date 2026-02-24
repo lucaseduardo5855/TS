@@ -31,3 +31,12 @@ mas que se comporta de formas diferentes dependendo se você passa um objeto "Ca
 Public -> Acessivel em todas as partes do código
 Private -> Acessivel apenas dentro do bloco de código que ele foi criado (Encapsulamento)
 dados sensivel = Sempre em private 
+
+
+Herança (Diagrama)
++ Antes do nome = Public
+- Antes do nome = Private
+# Antes do nome = Protected
+
+Polimorfismo
+ex: Passagem de um para outro com a classe igual Ex de Pessoa para Cliente e Aluno do diagrama e no codigo
