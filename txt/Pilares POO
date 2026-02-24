@@ -40,3 +40,7 @@ Herança (Diagrama)
 
 Polimorfismo
 ex: Passagem de um para outro com a classe igual Ex de Pessoa para Cliente e Aluno do diagrama e no codigo
+
+
+Super = Superclasse se refere a classe pai (grande)
+e as demais classe filha ex: getNomeCompleto da classe Pai (Pessoa)
