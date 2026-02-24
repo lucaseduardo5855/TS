@@ -42,5 +42,9 @@ Polimorfismo
 ex: Passagem de um para outro com a classe igual Ex de Pessoa para Cliente e Aluno do diagrama e no codigo
 
 
+Public = Qualquer lugar é acessada
+
 Super = Superclasse se refere a classe pai (grande)
 e as demais classe filha ex: getNomeCompleto da classe Pai (Pessoa)
+
+Protected = Mesma coisa de privated soq deixa acessar na Classe criada a (Pai) e as subclasses, mas fora dela não tb.
