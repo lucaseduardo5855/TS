@@ -13,7 +13,6 @@ Pilares da POO
 }
 
 
-
 - Encapsulamento = Visa ocultar partes internas de um objeto e exibir apenas o necessario para uso externo
 ex: Controle de tv (botoes e interface) e nao precisamos saber como funciona internamente para ele funcionar.
 
@@ -47,4 +46,15 @@ Public = Qualquer lugar é acessada
 Super = Superclasse se refere a classe pai (grande)
 e as demais classe filha ex: getNomeCompleto da classe Pai (Pessoa)
 
+Private = Quando temos atributos privador nós disponibilzamos acessos atravez de métodos publicos.
+
 Protected = Mesma coisa de privated soq deixa acessar na Classe criada a (Pai) e as subclasses, mas fora dela não tb.
+
+
+Get e Set
+obs: Se comportam como atributo da classe
+ex: _cpf passando ele valor no get e set
+quando eu usar = me refiro ao (SET)
+quando eu só chamar o valor = (GET)
+
+
