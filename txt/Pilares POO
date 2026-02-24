@@ -26,3 +26,8 @@ dog extends de Animal e cat extends de Animal tb
 - Polimorfismo = Algo que é polimorfo tem a habilidade de assumir diferentes formas
 ex:  Uma função que pede um objeto genérico do tipo "Animal", 
 mas que se comporta de formas diferentes dependendo se você passa um objeto "Cachorro" (late) ou "Gato" (mia) para ela, sem precisar usar IF/ELSE.
+
+
+Public -> Acessivel em todas as partes do código
+Private -> Acessivel apenas dentro do bloco de código que ele foi criado (Encapsulamento)
+dados sensivel = Sempre em private 
