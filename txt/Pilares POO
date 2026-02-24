@@ -1,0 +1,28 @@
+Pilares da POO
+
+- Abstração = Isolar as partes das coisas que estamos modelando dentro do nosso programa
+
+  Export class pessoa {
+  private nome: string;
+  private sobrenome: string;
+
+  constructor(nome: string, sobrenome: string){
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+  }
+}
+
+
+
+- Encapsulamento = Visa ocultar partes internas de um objeto e exibir apenas o necessario para uso externo
+ex: Controle de tv (botoes e interface) e nao precisamos saber como funciona internamente para ele funcionar.
+
+
+- Herança = Visa passar características de um objeto para outro
+ex: Filho de cachorro por exemplo (filhotes recebem as caracteristicas dos pais)
+dog extends de Animal e cat extends de Animal tb
+
+
+- Polimorfismo = Algo que é polimorfo tem a habilidade de assumir diferentes formas
+ex:  Uma função que pede um objeto genérico do tipo "Animal", 
+mas que se comporta de formas diferentes dependendo se você passa um objeto "Cachorro" (late) ou "Gato" (mia) para ela, sem precisar usar IF/ELSE.
