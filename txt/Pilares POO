@@ -59,3 +59,6 @@ Atributos staticos para reutilizar tb é bom ex: CpfPadrao e passar ele com clas
 
 
 FactoryMethod = Quando um método de uma classe cria um novo objeto
+
+
+Abstract = 
