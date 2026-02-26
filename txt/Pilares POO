@@ -62,3 +62,10 @@ FactoryMethod = Quando um método de uma classe cria um novo objeto
 
 
 Abstract = 
+
+
+Associação =
+Exemplo ''Escritor'', ''Ferramenta'' <- (caneta e maquina de escrever), ambas nao dependem uma das outras, o escrito pode viver sem a ferramenta e vice versa
+
+
+||
