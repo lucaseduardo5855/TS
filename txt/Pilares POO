@@ -61,8 +61,9 @@ Atributos staticos para reutilizar tb é bom ex: CpfPadrao e passar ele com clas
 FactoryMethod = Quando um método de uma classe cria um novo objeto
 
 
-Abstract = 
-
+Abstract ->Funciona como um "molde" ou "contrato". Uma classe abstrata (ex: Personagem) não pode ser instanciada diretamente (não podemos fazer new Personagem()). Ela serve apenas para ser herdada (extends).
+Métodos/Atributos Abstratos: Não possuem corpo/valor na classe mãe. Eles obrigam todas as classes filhas (ex: Guerreira, Monstro) a implementarem esses comportamentos obrigatoriamente (ex: forçar todo personagem a ter um emoji e um método bordao()).
+Métodos Concretos: A classe mãe abstrata também pode repassar métodos normais já prontos para as filhas usarem (ex: atacar() e perderVida()).
 
 Associação =
 Exemplo ''Escritor'', ''Ferramenta'' <- (caneta e maquina de escrever), ambas nao dependem uma das outras, o escrito pode viver sem a ferramenta e vice versa
