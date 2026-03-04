@@ -61,3 +61,6 @@ const maquina = new MaquinaEs('Maquina Escrever');
 
 escritor.ferramenta = maquina;
 escritor.escrever();
+
+
+//Inversão de dependencia -> Escritor depende de um Contrato que nó caso é o contrato com a Ferramenta(abstract), por isso é melhor de vez em quando fazer a dependencia de uma Classe no caso(Escritor) para um Contrato(Ferramenta) doq a gente fazer uma dependencia para uma classe concreta ex: Escritor -> Caneta
