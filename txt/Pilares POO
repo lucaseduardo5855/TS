@@ -78,4 +78,7 @@ Agregação -> Exemplo simples: Um carro e ele tem rodas, as rodas existem sem o
 Melhor método para fazer somatorias com array no js e ts
 
 
+Composição -> Relação mais fraca entre objetos, um objeto tem outro objeto como parte dele
+ex: Carro e motor, se carro parar de existir o motor também para de existir.
+
 ||
