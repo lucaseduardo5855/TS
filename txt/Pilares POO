@@ -47,6 +47,8 @@ Private = Quando temos atributos privador nós disponibilzamos acessos atravez d
 
 Protected = Mesma coisa de privated soq deixa acessar na Classe criada a (Pai) e as subclasses, mas fora dela não tb.
 
+Diferença entre Private e Protected => Private tranca a variavel apenas para ela, nem a classe filha consegue acessar. Protected as classes filhas acessam, mas externamente não.
+
 Get e Set
 obs: Se comportam como atributo da classe
 ex: \_cpf passando ele valor no get e set
@@ -78,7 +80,14 @@ Agregação -> Exemplo simples: Um carro e ele tem rodas, as rodas existem sem o
 Melhor método para fazer somatorias com array no js e ts
 
 
-Composição -> Relação mais fraca entre objetos, um objeto tem outro objeto como parte dele
-ex: Carro e motor, se carro parar de existir o motor também para de existir.
+Composição -> Relação mais forte entre objetos, um objeto tem outro objeto como parte absoluta, exemplo motor é parte absoluta de carro
+ex: Carro e motor, se carro parar de existir o motor também para de existir. Motor está sendo criado dentro do carro
+
+O super() garante que a classe Pai nasça antes da classe Filha.
+
+implements =>
+
+Se eu for utilizar Types não consigo utilizar nem Protected nem Private
+
 
 ||

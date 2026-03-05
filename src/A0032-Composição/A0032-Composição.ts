@@ -1,5 +1,5 @@
 export class Carro{
-  private readonly motor: Motor = new Motor();
+  private readonly motor: Motor = new Motor(); //Composição
 
     ligar():void{
     this.motor.ligar();
