@@ -68,5 +68,14 @@ Métodos Concretos: A classe mãe abstrata também pode repassar métodos normai
 Associação =
 Exemplo ''Escritor'', ''Ferramenta'' <- (caneta e maquina de escrever), ambas nao dependem uma das outras, o escrito pode viver sem a ferramenta e vice versa
 
+Inversão de dependencia -> Escritor depende de um Contrato que nó caso é o contrato com a Ferramenta(abstract), por isso é melhor de vez em quando fazer a dependencia de uma Classe no caso(Escritor) para um Contrato(Ferramenta) doq a gente fazer uma dependencia para uma classe concreta ex: Escritor -> Caneta
+
+
+Agregação -> Exemplo simples: Um carro e ele tem rodas, as rodas existem sem o carro, e o carro sem as rodas, mas o carro não funciona nao anda, sem as rodas. O carro precisa AGREGAR rodas para funcionar.
+
+
+.Reduce oq é? -> "Espremedor" de arrays, ele pega a lista cheia de coisas, e vai somando ou combinando tudo até sobrando um unico valor total ex: ((soma, produto) => soma + produto.preco, 0);
+Melhor método para fazer somatorias com array no js e ts
+
 
 ||
