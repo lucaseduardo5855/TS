@@ -85,9 +85,17 @@ ex: Carro e motor, se carro parar de existir o motor também para de existir. Mo
 
 O super() garante que a classe Pai nasça antes da classe Filha.
 
-implements =>
+implements => Contrato de comportamento. Classe promete implementar o molde extato que o Type exige, podemos usar em varias, diferente de extends.
 
-Se eu for utilizar Types não consigo utilizar nem Protected nem Private
+Se eu for utilizar Types não consigo utilizar nem Protected nem 
+Private, eles só definem a "casca" externa de um objeto, no caso public.
 
+Use implements (Type/Interface) quando você quiser apenas garantir que várias classes tenham as mesmas variáveis e funções, não importando a lógica interna delas. É o mais usado no dia a dia.
+Use extends (Abstract Class) quando as classes forem da mesma "família" e você quiser reaproveitar códigos (métodos que já fazem alguma coisa).
+
+Interface e Type funcionam da mesma maneira;
+Interface conseguimos mesclar por exemplo interface cliente q tem idade:number, e outra interface Cliente q tem nome: string, ele vaI unir as duas, ao contrario de type.
+obs: usamos quando estamos modelando uma forma
+Type Alias = eu posso modelas um tipo, um tipo simples, uma forma, qualquer coisa. (Um pouco de vantagem por conta de restrição)
 
 ||
