@@ -1,53 +1,19 @@
-interface VideoPlayerElements {
-  videoPlayer: HTMLVideoElement;
-  playButton: HTMLButtonElement;
-  stopButton: HTMLButtonElement;
-}
+//Elementos que precisamos ter na tela  - botoes etc
 
-interface videoPlayerActions {
-  iniciarVideo(): void;
-  stop(): void;
-  playToogle(): void;
-}
 
-export default class videoPlayer implements videoPlayerActions {
-  private videoPlayer: HTMLVideoElement;
-  private playButton: HTMLButtonElement;
-  private stopButton: HTMLButtonElement;
 
-  constructor(videoPlayerElements: VideoPlayerElements) {
-    this.videoPlayer = videoPlayerElements.videoPlayer;
-    this.playButton = videoPlayerElements.playButton;
-    this.stopButton = videoPlayerElements.stopButton;
-  }
+//Ações -> ações pausar, iniciar, play
 
-  iniciarVideo(): void {
-    this.playButton.addEventListener('click', () => {
-      this.playToogle();
-    });
 
-    this.stopButton.addEventListener('click', () => {
-      this.videoPlayer.pause();
-      this.videoPlayer.currentTime = 0;
-    })
-  }
 
-  playToogle(): void {
-    if(this.videoPlayer.paused){
-      this.videoPlayer.play();
-      this.playButton.innerText = 'Paused'
-    }else{
-      this.videoPlayer.pause()
-      this.playButton.innerText = 'Play'
-    }
-  }
 
-  stop(): void {}
-}
+//Classe com implements
 
-const videoPlayeer = new videoPlayer({
-  videoPlayer: document.querySelector('.video') as HTMLVideoElement,
-  playButton: document.querySelector('.play') as HTMLButtonElement,
-  stopButton: document.querySelector('.stop') as HTMLButtonElement,
-});
-videoPlayeer.iniciarVideo();
+
+
+
+
+//Variaveis
+
+
+//botoes tem q iniciar e pausar ao apertar, botao stop tem q

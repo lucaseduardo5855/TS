@@ -98,4 +98,8 @@ Interface conseguimos mesclar por exemplo interface cliente q tem idade:number, 
 obs: usamos quando estamos modelando uma forma
 Type Alias = eu posso modelas um tipo, um tipo simples, uma forma, qualquer coisa. (Um pouco de vantagem por conta de restrição)
 
+Declaration Merge => Duas interfaces se unem para formar uma só
+
+Em array se declaramos readonly temos que validar, pois temos que declarar do outro lado tb ex: readonly enderecos: string[]; Aqui ele só ta dando readonly pro [] não pq vai dentro dela, entao conseguimos dar um push, super importante fazemos o readonly na string tb;
+
 ||
