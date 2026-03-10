@@ -42,3 +42,33 @@ function mostraNome(obj: PessoaOuAnimal): void{
 
 mostraNome(new Aluno('Lucas'));
 mostraNome({tipo: 'pessoa', nome: 'Rosa'});
+
+
+
+exemplo
+import express, { Request, Response } from 'express';
+
+const app = express();
+app.use(express.json());
+
+// 1. Criamos a "regra" do que a nossa API espera receber no Body
+interface CriarUsuarioBody {
+  nome: string;
+  email: string;
+  idade: number;
+}
+
+// 2. Avisamos ao Express que o Request vai usar essa regra no Body
+// O Request do Express aceita 4 parâmetros de tipo: Params, ResBody, ReqBody, ReqQuery
+app.post('/usuarios', (req: Request<{}, {}, CriarUsuarioBody>, res: Response) => {
+  
+  // A partir de agora, se você digitar "req.body." o VS Code já vai
+  // te sugerir "nome", "email" e "idade". É mágico!
+  const nomeDoCara = req.body.nome; 
+  const idadeDoCara = req.body.idade;
+
+  // Se você tentar fazer req.body.cpf, o TypeScript vai dar ERRO,
+  // porque CPF não está na nossa interface CriarUsuarioBody!
+  
+  res.json({ mensagem: `Usuário ${nomeDoCara} criado!` });
+});

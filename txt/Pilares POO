@@ -103,3 +103,14 @@ Declaration Merge => Duas interfaces se unem para formar uma só
 Em array se declaramos readonly temos que validar, pois temos que declarar do outro lado tb ex: readonly enderecos: string[]; Aqui ele só ta dando readonly pro [] não pq vai dentro dela, entao conseguimos dar um push, super importante fazemos o readonly na string tb;
 
 ||
+
+
+A tipagem do Request do Express tem "espaços" pré-definidos (em uma ordem exata) para você tipar diferentes partes da requisição. A ordem é essa:
+
+req.body: É o "corpo" da requisição. Se o usuário preencheu um formulário de cadastro, os dados invisíveis (nome, senha, CPF) chegam por aqui.
+
+req.params: São os parâmetros fixos na URL. Se a sua rota é /usuarios/:id e o cara acessa /usuarios/15, o 15 chega dentro do req.params.id.
+
+req.query: São os filtros de pesquisa na URL (aquilo que vem depois do ponto de interrogação). Se a URL for /sapatos?cor=preto, o "preto" chega no req.query.cor.
+
+req.headers: É o cabeçalho. Geralmente é por onde o Front-End manda o token de autenticação (JWT) para provar que o usuário está logado.
