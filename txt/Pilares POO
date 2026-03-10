@@ -120,3 +120,6 @@ TypeOff => Ele sabe o tipo certinho que foi eferido noq setamos no exemplo: cons
 vamos setar cores: typeOf coresObj agora o cores tem as métricas do coresObj
 
 keyof => Ele pega as métricas, no caso eu tinha cor: 'amarelo' | 'verde' dentro de cor: agora se eu fizer cor: CoresChaves pq eu setei la em cima CoresChaves =  keyof CoresObj eu tenho as métricas dentro.
+
+ChaveEmTipos => Setamos a métrica q ja tem 
+ex: Veiculo['marca'] em vez de ficar repitindo o codigo.
