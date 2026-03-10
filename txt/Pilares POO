@@ -102,7 +102,7 @@ Declaration Merge => Duas interfaces se unem para formar uma só
 
 Em array se declaramos readonly temos que validar, pois temos que declarar do outro lado tb ex: readonly enderecos: string[]; Aqui ele só ta dando readonly pro [] não pq vai dentro dela, entao conseguimos dar um push, super importante fazemos o readonly na string tb;
 
-||
+| 
 
 
 A tipagem do Request do Express tem "espaços" pré-definidos (em uma ordem exata) para você tipar diferentes partes da requisição. A ordem é essa:
@@ -118,3 +118,5 @@ req.headers: É o cabeçalho. Geralmente é por onde o Front-End manda o token d
 
 TypeOff => Ele sabe o tipo certinho que foi eferido noq setamos no exemplo: const coresObj ... 
 vamos setar cores: typeOf coresObj agora o cores tem as métricas do coresObj
+
+keyof => Ele pega as métricas, no caso eu tinha cor: 'amarelo' | 'verde' dentro de cor: agora se eu fizer cor: CoresChaves pq eu setei la em cima CoresChaves =  keyof CoresObj eu tenho as métricas dentro.
