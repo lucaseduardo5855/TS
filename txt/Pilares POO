@@ -123,3 +123,5 @@ keyof => Ele pega as métricas, no caso eu tinha cor: 'amarelo' | 'verde' dentro
 
 ChaveEmTipos => Setamos a métrica q ja tem 
 ex: Veiculo['marca'] em vez de ficar repitindo o codigo.
+
+Overload => Baseado nos parametros da function, vamos fazer a função se comportar de maneira diferente
