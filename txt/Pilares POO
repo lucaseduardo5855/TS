@@ -114,3 +114,7 @@ req.params: São os parâmetros fixos na URL. Se a sua rota é /usuarios/:id e o
 req.query: São os filtros de pesquisa na URL (aquilo que vem depois do ponto de interrogação). Se a URL for /sapatos?cor=preto, o "preto" chega no req.query.cor.
 
 req.headers: É o cabeçalho. Geralmente é por onde o Front-End manda o token de autenticação (JWT) para provar que o usuário está logado.
+
+
+TypeOff => Ele sabe o tipo certinho que foi eferido noq setamos no exemplo: const coresObj ... 
+vamos setar cores: typeOf coresObj agora o cores tem as métricas do coresObj
