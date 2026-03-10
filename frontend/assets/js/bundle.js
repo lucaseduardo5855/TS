@@ -10,40 +10,45 @@
 
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
-class videoPlayer {
-    constructor(videoPlayerElements) {
-        this.videoPlayer = videoPlayerElements.videoPlayer;
-        this.playButton = videoPlayerElements.playButton;
-        this.stopButton = videoPlayerElements.stopButton;
+//Classe com implements
+class VideoPlay {
+    constructor(VideoPlayerElements) {
+        this.videoPlay = VideoPlayerElements.videoPlay;
+        this.playButton = VideoPlayerElements.playButton;
+        this.stopButton = VideoPlayerElements.stopButton;
     }
     iniciarVideo() {
         this.playButton.addEventListener('click', () => {
             this.playToogle();
         });
         this.stopButton.addEventListener('click', () => {
-            this.videoPlayer.pause();
-            this.videoPlayer.currentTime = 0;
+            this.videoPlay.pause();
+            this.videoPlay.currentTime = 0;
         });
     }
     playToogle() {
-        if (this.videoPlayer.paused) {
-            this.videoPlayer.play();
-            this.playButton.innerText = 'Paused';
+        if (this.videoPlay.paused) {
+            this.videoPlay.play();
+            this.playButton.innerText = 'Pause';
         }
         else {
-            this.videoPlayer.pause();
+            this.videoPlay.pause();
             this.playButton.innerText = 'Play';
         }
     }
-    stop() { }
+    stop() {
+        //
+    }
 }
-exports["default"] = videoPlayer;
-const videoPlayeer = new videoPlayer({
-    videoPlayer: document.querySelector('.video'),
+exports["default"] = VideoPlay;
+//Variaveis
+const playVideo = new VideoPlay({
+    videoPlay: document.querySelector('.video'),
     playButton: document.querySelector('.play'),
     stopButton: document.querySelector('.stop'),
 });
-videoPlayeer.iniciarVideo();
+playVideo.iniciarVideo();
+//botoes tem q iniciar e pausar ao apertar, botao stop tem q
 
 
 /***/ }
