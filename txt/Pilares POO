@@ -104,7 +104,6 @@ Em array se declaramos readonly temos que validar, pois temos que declarar do ou
 
 | 
 
-
 A tipagem do Request do Express tem "espaços" pré-definidos (em uma ordem exata) para você tipar diferentes partes da requisição. A ordem é essa:
 
 req.body: É o "corpo" da requisição. Se o usuário preencheu um formulário de cadastro, os dados invisíveis (nome, senha, CPF) chegam por aqui.
@@ -125,3 +124,6 @@ ChaveEmTipos => Setamos a métrica q ja tem
 ex: Veiculo['marca'] em vez de ficar repitindo o codigo.
 
 Overload => Baseado nos parametros da function, vamos fazer a função se comportar de maneira diferente
+
+
+| 
