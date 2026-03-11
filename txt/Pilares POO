@@ -129,3 +129,4 @@ Overload => Baseado nos parametros da function, vamos fazer a função se compor
 | 
 
 Nao valor => Null e Undefined
+Operador de coalescência nula => Valida se retornar null ou undefined o lado direito é executado, se não o da esquerda é executado.

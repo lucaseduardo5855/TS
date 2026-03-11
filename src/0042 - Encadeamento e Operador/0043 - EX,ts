@@ -1,0 +1,7 @@
+const quantidadeEmEstoque = 0;
+
+const resultado1 = quantidadeEmEstoque || 10;
+console.log(resultado1); //Imprime 10 mas o ESTOQUE era 0 (ERRADO)
+
+const resultado2 = quantidadeEmEstoque ?? 10;
+console.log(resultado2); //Imprime 0 que é o (CORRETO)
