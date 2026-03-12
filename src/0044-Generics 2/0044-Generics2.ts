@@ -10,7 +10,7 @@ export async function promisseAsync(){
 
 function minhaPromisse(): Promise<MeuTipo> {
   return new Promise((resolve, reject) => {
-    setInterval(() => {
+    setTimeout(() => {
       resolve(1);
     }, 1000)
   })
