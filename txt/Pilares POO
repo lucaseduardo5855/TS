@@ -132,3 +132,8 @@ Operador de coalescência nula => Valida se retornar null ou undefined o lado di
 
 Generics => Quando não sei qual coisa por para typar geralmente vamos ter que usar e informar, ele pode ser usado em varios locais, quando eu usar a interface tenho q mandar o tipo, representadas por <T>, <U>, etc
 Usamos quando queremos criar uma função, classe ou interface que seja flexível e funcione com VÁRIOS tipos de dados diferentes
+
+Async function => O que é: É uma função que trabalha em segundo plano (não trava o sistema). Ela permite que o seu código continue executando outras tarefas enquanto ela resolve algo demorado. Sempre retorna uma Promisse. Sempre trabalha com await(pause a função e espere ela ser resolvida)
+usada em: Buscar dados em APIs (como consultar um CEP), ler arquivos ou salvar informações em Banco de Dados.
+
+Then => Então (.then(...): "Vou ficar esperando)
