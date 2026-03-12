@@ -125,8 +125,10 @@ ex: Veiculo['marca'] em vez de ficar repitindo o codigo.
 
 Overload => Baseado nos parametros da function, vamos fazer a função se comportar de maneira diferente
 
-
 | 
 
 Nao valor => Null e Undefined
 Operador de coalescência nula => Valida se retornar null ou undefined o lado direito é executado, se não o da esquerda é executado.
+
+Generics => Quando não sei qual coisa por para typar geralmente vamos ter que usar e informar, ele pode ser usado em varios locais, quando eu usar a interface tenho q mandar o tipo, representadas por <T>, <U>, etc
+Usamos quando queremos criar uma função, classe ou interface que seja flexível e funcione com VÁRIOS tipos de dados diferentes
