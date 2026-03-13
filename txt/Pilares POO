@@ -130,6 +130,11 @@ Overload => Baseado nos parametros da function, vamos fazer a função se compor
 Nao valor => Null e Undefined
 Operador de coalescência nula => Valida se retornar null ou undefined o lado direito é executado, se não o da esquerda é executado.
 
+Async function => O que é: É uma função que trabalha em segundo plano (não trava o sistema). Ela permite que o seu código continue executando outras tarefas enquanto ela resolve algo demorado. Sempre retorna uma Promisse. Sempre trabalha com await(pause a função e espere ela ser resolvida)
+usada em: Buscar dados em APIs (como consultar um CEP), ler arquivos ou salvar informações em Banco de Dados.
+
+Then => Então (.then(...): "Vou ficar esperando)
+
 Generics => Quando não sei qual coisa por para typar geralmente vamos ter que usar e informar, ele pode ser usado em varios locais, quando eu usar a interface tenho q mandar o tipo, representadas por <T>, <U>, etc
 Usamos quando queremos criar uma função, classe ou interface que seja flexível e funcione com VÁRIOS tipos de dados diferentes
 
@@ -140,8 +145,10 @@ Generics com Restrições (Constraints): Usamos a palavra extends para colocar u
 Exemplo Clássico: K extends keyof O
 Tradução: A letra K (Chave) obrigatoriamente precisa ser uma das propriedades que existem dentro do objeto O. O TypeScript não vai deixar passar uma chave inventada!
 
-Async function => O que é: É uma função que trabalha em segundo plano (não trava o sistema). Ela permite que o seu código continue executando outras tarefas enquanto ela resolve algo demorado. Sempre retorna uma Promisse. Sempre trabalha com await(pause a função e espere ela ser resolvida)
-usada em: Buscar dados em APIs (como consultar um CEP), ler arquivos ou salvar informações em Banco de Dados.
+Generics Estrutura Pilha => Livros, quando for adicionar livros ele vai para final da
 
-Then => Então (.then(...): "Vou ficar esperando)
+Pilha => Quando eu add elementos no final, ele também remove do final (ultimo a entrada, primeiro a sair) LIFO, last in first out
+push => adiciona elemento e Pop => Retira
 
+
+| 
