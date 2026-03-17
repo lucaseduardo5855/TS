@@ -17,7 +17,6 @@ export class Pilha<T> {
   }
 
   pop(): T | void {
-    
     if (this.isEmpty()) return undefined; //Se tiver vazia retornamos Undefinied
 
     this.contador--; //decremento
