@@ -153,4 +153,5 @@ push => adiciona elemento e Pop => Retira
 
 | 
 
-Type Predicate => 
+Type Predicate => É uma assinatura especial de retorno ex: value is number, que serve para fofocar para o compilador do TS que se for TRUE ele é number 
+
