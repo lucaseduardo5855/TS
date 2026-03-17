@@ -155,3 +155,17 @@ push => adiciona elemento e Pop => Retira
 Type Predicate => É uma assinatura especial de retorno ex: value is number, que serve para fofocar para o compilador do TS que se for TRUE ele é number 
 
 Type Record => Fala qual é a chave do objeto e qual é o tipo do valor do obj Exemplo: Record<string, string>
+
+-Required => Tranforma tudo opcional em não opcional, ex: type PessoaRequired = Required<PessoaProtocol> agora o PessoaProtocol q era opcional ? agora não é mais.
+
+-Partial => Volta para Opcional, ex: Partial<PessoaRequired>
+
+-Readonly => Não pode ser modificado
+
+-Pick => Coloca apenas oq queremos, exemplo: escolha da chave pessoa apenas o nome sobrenome EXEMPLO: Pick<PessoaRequired, 'nome' | 'sobrenome'>
+
+|
+
+Exclude => Computa todos os tipos que estão em ABC que não estão em CDE (Excluir os repetidos)
+
+Extract => Computa os que estão em ABC que podem ser atribuidos aos tipos de CDE (Repetidos)
