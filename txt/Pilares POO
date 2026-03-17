@@ -150,8 +150,8 @@ Generics Estrutura Pilha => Livros, quando for adicionar livros ele vai para fin
 Pilha => Quando eu add elementos no final, ele também remove do final (ultimo a entrada, primeiro a sair) LIFO, last in first out
 push => adiciona elemento e Pop => Retira
 
-
 | 
 
 Type Predicate => É uma assinatura especial de retorno ex: value is number, que serve para fofocar para o compilador do TS que se for TRUE ele é number 
 
+Type Record => Fala qual é a chave do objeto e qual é o tipo do valor do obj Exemplo: Record<string, string>
