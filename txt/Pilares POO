@@ -161,6 +161,7 @@ Type Record => Fala qual é a chave do objeto e qual é o tipo do valor do obj E
 -Partial => Volta para Opcional, ex: Partial<PessoaRequired>
 
 -Readonly => Não pode ser modificado
+o readonly na frente impede de trocar o array inteiro, mas para impedir de dar push, o TypeScript moderno pede que você use ReadonlyArray<string> ou readonly string[] dependendo da versão.
 
 -Pick => Coloca apenas oq queremos, exemplo: escolha da chave pessoa apenas o nome sobrenome EXEMPLO: Pick<PessoaRequired, 'nome' | 'sobrenome'>
 
