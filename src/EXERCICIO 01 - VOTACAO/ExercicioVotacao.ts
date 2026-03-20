@@ -1,74 +1,56 @@
 //Exercicio Ligação entre Classes
 //O que temos que fazer? -> Temos 2 perguntas, onde as pessoas podem votar, baseado na pergunta temos opções e as pessoas votam nas opções e escolhem quais elas querem e votariam e aumenta mediante aos votos.
 
-export class Votacao {
-  private options: VotationOption[] = [];
-
-  constructor(public details: string) {}
-
-  addOption(option: VotationOption): void {
-    this.options.push(option);
-  }
-
-  vote(optionIndex: number): void {
-    this.options[optionIndex].numberOfVotes++;
-  }
-
-  getOptions(): VotationOption[] {
-    return this.options;
-  }
-}
-
-type VotationOption = {
+type VotationOptions = {
   option: string;
   numberOfVotes: number;
 };
 
-export class VotationApp {
-  private votation: Votacao[] = [];
+export class Votation {
+  private _votationOptions: VotationOptions[] = [];
+  constructor(public details: string) {}
 
-  addVotation(votationAdd: Votacao): void {
-    this.votation.push(votationAdd);
+  //Métodos
+  addVotationOptions(votationOption: VotationOptions): void {
+    this._votationOptions.push(votationOption);
+  }
+
+  voto(votationIndex: number): void {
+    if (!this._votationOptions[votationIndex]) return;
+    this._votationOptions[votationIndex].numberOfVotes += 1;
+  }
+
+  get votationOptions(): VotationOptions[] {
+    return this._votationOptions;
+  }
+}
+
+export class VotationApp {
+  private votations: Votation[] = [];
+
+  addVotation(votation: Votation) {
+    this.votations.push(votation);
   }
 
   showVotation(): void {
-    // 1. Esse loop pega cada URNA (votation) da lista de urnas
-    for (const votation of this.votation) {
+    for (const votation of this.votations) {
       console.log(votation.details);
-
-      // 2. AGORA, dentro desta urna específica, pegamos as opções dela
-      for (const option of votation.getOptions()) {
-        console.log(`${option.option} : ${option.numberOfVotes}`);
+      for (const vontationOption of votation.votationOptions) {
+        console.log(vontationOption.option, vontationOption.numberOfVotes);
       }
-
-      console.log('----');
     }
   }
 }
 
+const votation1 = new Votation('Qual é sua linguagem favorita?');
+votation1.addVotationOptions({ option: 'Python', numberOfVotes: 0 });
+votation1.addVotationOptions({ option: 'TS', numberOfVotes: 0 });
+votation1.addVotationOptions({ option: 'JS', numberOfVotes: 0 });
 
-const votacao1 = new Votacao('Linguagem Favorita?');
-votacao1.addOption({option: 'Python', numberOfVotes: 0});
-votacao1.addOption({option: 'JavaScript', numberOfVotes: 0});
-votacao1.addOption({option: 'TypeScript', numberOfVotes: 0});
-const app = new VotationApp();
-app.addVotation(votacao1);
+votation1.voto(0);
+votation1.voto(0);
 
-votacao1.vote(0);
-votacao1.vote(0);
-votacao1.vote(0);
-votacao1.vote(1);
+const votationapp = new VotationApp();
+votationapp.addVotation(votation1);
+votationapp.showVotation()
 
-
-const votacaoCores = new Votacao('Qual sua cor favorita?');
-votacaoCores.addOption({option: 'Vermelho', numberOfVotes:0})
-votacaoCores.addOption({option: 'Azul', numberOfVotes:0})
-votacaoCores.addOption({option: 'Verde', numberOfVotes:0})
-app.addVotation(votacaoCores);
-
-votacaoCores.vote(1);
-votacaoCores.vote(1);
-votacaoCores.vote(1);
-votacaoCores.vote(2);
-
-app.showVotation();
