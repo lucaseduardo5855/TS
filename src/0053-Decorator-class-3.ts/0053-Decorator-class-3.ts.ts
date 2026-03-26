@@ -1,8 +1,9 @@
+interface Constructor {
+  new (...args: any[]):any
+}
+
 function inverteNomeECor(param1: string, param2: string) {
-  //Closure
-  return function <T extends new (...args: any[]) => any>(
-    target: T,
-  ): T {
+  return function(target: Constructor): Constructor {
     console.log('Sou o decorator e recebi', target);
 
     return class extends target {
@@ -22,7 +23,17 @@ function inverteNomeECor(param1: string, param2: string) {
   };
 }
 
-@inverteNomeECor('Outra Coisa', 'Valor2')
+function outroDecorator(param1: string){
+  return function(target: Constructor){
+  console.log('Sou o 2 decorador' + ' ' + param1);
+  return target;
+};
+}
+
+
+
+@outroDecorator('NEYMAR TEM Q IR P COPA') //SEGUNDO DECORATOR
+@inverteNomeECor('Outra Coisa', 'Valor2') //PRIMEIRO DECORATOR
 export class Animal {
   constructor(
     public nome: string,
