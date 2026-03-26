@@ -170,3 +170,11 @@ o readonly na frente impede de trocar o array inteiro, mas para impedir de dar p
 Exclude => Computa todos os tipos que estão em ABC que não estão em CDE (Excluir os repetidos)
 
 Extract => Computa os que estão em ABC que podem ser atribuidos aos tipos de CDE (Repetidos)
+
+Decorator de Classe = Objeto impostor, finge ser o objeto mas no meio do caminho ele pode observar oq o objeto ta fazendo e modificar e substituir por completo.
+ex: function decorator(target:any):any{
+  console.log('Oie do decorator') //faz algo antes de entregar o obj
+  return target;
+}
+
+Clase anonima = classe fm fome
