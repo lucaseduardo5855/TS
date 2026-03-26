@@ -181,4 +181,8 @@ Clase anonima = classe sem nome ex: class extends target
 
 Decorator de classe = só recebe a classe ex: target, ele é chamado na criação da classe em si, e nao precisamos fazer a chamada do decorator @ explicitamente
 
+Decotator Factorys = A Factory permite que o mesmo código de decorator sirva para várias situações diferentes, apenas mudando o que você passa entre parênteses. 
+ex: @Role('admin') -> O param1 seria 'admin'.
+    @Role('user') -> O param1 seria 'user'.
+
 |
