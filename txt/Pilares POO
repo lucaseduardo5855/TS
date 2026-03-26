@@ -177,4 +177,8 @@ ex: function decorator(target:any):any{
   return target;
 }
 
-Clase anonima = classe fm fome
+Clase anonima = classe sem nome ex: class extends target
+
+Decorator de classe = só recebe a classe ex: target, ele é chamado na criação da classe em si, e nao precisamos fazer a chamada do decorator @ explicitamente
+
+|
