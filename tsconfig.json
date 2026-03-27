@@ -5,11 +5,13 @@
     "lib": ["es6", "dom"],
     "outDir": "./dist",
     "rootDir": "./src",
-    "strict": true,                   
+    "strict": true,
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
     "noEmitOnError": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": ["./src"]
 }
