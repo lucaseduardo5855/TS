@@ -1,16 +1,25 @@
+function decorador(
+  classPrototype: any,
+  nomeMetodo: string | symbol,
+  index: number,
+): any {
+  console.log(classPrototype);
+  console.log(nomeMetodo);
+  console.log(index);
+}
+
 export class UmaPessoa {
   nome: string;
   sobrenome: string;
   idade: number;
 
-  constructor(nome: string, sobrenome: string, idade: number) {
+  constructor( nome: string,  sobrenome: string, idade: number) {
     this.nome = nome;
     this.sobrenome = sobrenome;
     this.idade = idade;
   }
 
-  @decorador
-  metodo(msg: string): string {
+  metodo(@decorador msg: string): string {
     return `${this.nome} ${this.sobrenome}: ${msg}`;
   }
 
@@ -26,7 +35,3 @@ export class UmaPessoa {
     this.sobrenome = palavra.join(' '); //junta tudo
   }
 }
-
-const pessoa = new UmaPessoa('Lucas', 'Eduardo', 22);
-const metodo = pessoa.metodo('Ola Mundo');
-console.log(metodo);
